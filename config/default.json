@@ -1,0 +1,17 @@
+{
+  "access_token_expiry": "6h",
+  "db_connect_config": {
+    "client": "mysql",
+    "connection": {
+      "host": "",
+      "port": "",
+      "user": "",
+      "password": "",
+      "database": ""
+    }
+  },
+  "max_age": 900000,
+  "salt_rounds": "",
+  "token_key_access": "",
+  "token_key_refresh": ""
+}

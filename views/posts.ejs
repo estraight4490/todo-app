@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <%- include("partials/styles.ejs") %>
+  </head>
+  <body>
+    <%- include("partials/header.ejs") %>
+    <section class="container-fluid">
+      <% for(post of posts) { %>
+        <div><%= post.username %></div>
+        <div><%= post.title %></div>
+      <% } %>
+    </section>
+  </body>
+</html>

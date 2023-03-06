@@ -1,0 +1,34 @@
+<nav class="navbar navbar-default navbar-static-top">
+  <div class="container">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/">To Do List</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li class="<%= (active_link === '/') ? 'active' : '' %>">
+          <a href="/">Home</a>
+        </li>
+        <li class="<%= (active_link === '/posts') ? 'active' : '' %>">
+          <a href="/posts">Posts</a>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <% if (!user) { %>
+        <li class="<%= (active_link === '/login') ? 'active' : '' %>">
+          <a href="/login">Login</a>
+        </li>
+        <li class="<%= (active_link === '/register') ? 'active' : '' %>">
+          <a href="/register">Register</a>
+        </li>
+        <% } else { %>
+          <li class="<%= (active_link === '/settings') ? 'active' : '' %>">
+            <a href="#">Settings</a>
+          </li>
+          <li>
+            <a href="/logout">Logout</a>
+          </li>
+        <% } %>
+      </ul>
+    </div>
+  </div>
+</nav>
